@@ -14,7 +14,7 @@ backend/app/__pycache__/
 /coverage
 # Virtual environment
 backend/.venv/
-backend/.env/
+backend/.env
 
 # Node modules
 frontend/node_modules/
