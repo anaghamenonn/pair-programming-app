@@ -20,7 +20,7 @@ export default function RoomPage() {
   useEffect(() => {
     if (!roomId) return;
     // const ws = new WebSocket(`ws://localhost:8000/ws/${roomId}`);
-    const ws = new WebSocket(`wss://pair-programming-app-61e6.onrender.com/ws/${roomId}`);
+    const ws = new WebSocket(`${process.env.REACT_APP_WS_URL}/ws/${roomId}`);
 
     
     ws.onopen = () => setConnected(true);
