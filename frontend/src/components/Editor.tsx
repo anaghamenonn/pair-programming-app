@@ -118,7 +118,7 @@ export default function CodeEditor({ onType }: EditorProps) {
 
     const fetchAutocomplete = async (currentCode: string) => {
         try {
-            const res = await axios.post("http://localhost:8000/autocomplete", {
+            const res = await axios.post("https://pair-programming-app-61e6.onrender.com/autocomplete", {
                 code: currentCode,
                 cursorPosition: currentCode.length,
                 language: "python"

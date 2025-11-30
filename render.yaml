@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: pair-programming app
+    env: python
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "uvicorn app.main:app --host 0.0.0.0 --port 10000"
+    plan: free
+    autoDeploy: true
+    websocket: true
+    
+databases:
+  - name: pair-pro-db
+    engine: postgres
+    plan: free
